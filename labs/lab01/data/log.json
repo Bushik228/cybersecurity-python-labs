@@ -1,0 +1,68 @@
+[
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-22 21:08:37",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "failure",
+        "timestamp": "2026-09-22 21:08:37",
+        "args": [
+            "admin",
+            "WrongPass123"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "unknown",
+        "result": "failure",
+        "timestamp": "2026-09-22 21:08:37",
+        "args": [
+            "unknown",
+            "Pass12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-22 22:24:00",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "failure",
+        "timestamp": "2026-09-22 22:24:00",
+        "args": [
+            "admin",
+            "WrongPass123"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "unknown",
+        "result": "failure",
+        "timestamp": "2026-09-22 22:24:00",
+        "args": [
+            "unknown",
+            "Pass12345"
+        ],
+        "kwargs": {}
+    }
+]
