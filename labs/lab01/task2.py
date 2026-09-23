@@ -71,7 +71,7 @@ print("=" * 60)
 
 
 def check_access(username: str, resource: tuple) -> str:
-    # Перевіряє права доступу користувача до ресурсу за моделлю MAC/RBAC
+    # Перевіряє права доступу користувача до ресурсу
     res_name, res_level = resource
 
     # Перевірка наявності користувача в базі
