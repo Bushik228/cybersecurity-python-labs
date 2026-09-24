@@ -64,5 +64,126 @@
             "Pass12345"
         ],
         "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-24 08:51:04",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:51:04",
+        "args": [
+            "admin",
+            "WrongPass123"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "unknown",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:51:04",
+        "args": [
+            "unknown",
+            "Pass123456"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-24 08:51:59",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:51:59",
+        "args": [
+            "admin",
+            "WrongPass123"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "unknown",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:51:59",
+        "args": [
+            "unknown",
+            "Pass123456"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-24 08:51:59",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-24 08:53:36",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:53:36",
+        "args": [
+            "admin",
+            "WrongPass123"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "unknown",
+        "result": "failure",
+        "timestamp": "2026-09-24 08:53:36",
+        "args": [
+            "unknown",
+            "Pass123456"
+        ],
+        "kwargs": {}
+    },
+    {
+        "event": "login",
+        "user": "admin",
+        "result": "success",
+        "timestamp": "2026-09-24 08:53:36",
+        "args": [
+            "admin",
+            "Admin12345"
+        ],
+        "kwargs": {}
     }
 ]

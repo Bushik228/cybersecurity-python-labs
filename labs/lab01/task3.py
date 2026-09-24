@@ -1,12 +1,12 @@
 """Завдання 3: Безпечне хешування, CSV-база та JSON-логування з винятками."""
 
 import csv
-from datetime import datetime
 import functools
 import hashlib
 import json
 import os
 import sys
+from datetime import datetime
 
 # Імпорт номера варіанту студента
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
@@ -25,8 +25,6 @@ users_db = []
 
 class ValidationError(Exception):
     """Власний виняток для помилок валідації паролів."""
-
-    pass
 
 
 def generate_hash(password: str, salt: str = "00000") -> str:
@@ -66,7 +64,7 @@ def log_event(func):
                 "event": "login",
                 "user": str(username) if username else "",
                 "result": result,
-                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "timestamp": datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S"),
                 "args": list(args),
                 "kwargs": kwargs,
             }
@@ -76,7 +74,7 @@ def log_event(func):
                 try:
                     with open(JSON_PATH, "r", encoding="utf-8") as f:
                         logs = json.load(f)
-                except Exception:
+                except (FileNotFoundError, json.JSONDecodeError):
                     logs = []
 
             logs.append(log_data)
@@ -145,6 +143,7 @@ def main() -> None:
         ("security", "CyberSec002"),
         ("operator", "OperSystem4"),
         ("backup", "BackupKey99"),
+        ("", "BackupKey99"),
     )
 
     try:
@@ -154,8 +153,8 @@ def main() -> None:
         print("[+] Спроба 1 (успіх):", login("admin", "Admin12345"))
         print("[-] Спроба 2 (невірний пароль):", login("admin", "WrongPass123"))
         print("[-] Спроба 3 (невідомий юзер):", login("unknown", "Pass123456"))
-
-    except (FileNotFoundError, PermissionError, IOError) as e:
+        print("[+] Спроба 1 (успіх):", login("admin", "Admin12345"))
+    except (OSError, FileNotFoundError, PermissionError) as e:
         print(f"Помилка файлової системи: {e}")
     except (ValidationError, ValueError) as e:
         print(f"Помилка валідації даних: {e}")

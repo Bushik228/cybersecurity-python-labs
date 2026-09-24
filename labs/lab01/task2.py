@@ -3,7 +3,6 @@ import sys
 
 # Імпорт індивідуальних параметрів студента
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from shared.student import GROUP_NAME, STUDENT_NAME, VARIANT_NUMBER
 
 # База даних користувачів із атрибутами доступу
 users = {
@@ -72,7 +71,7 @@ print("=" * 60)
 
 def check_access(username: str, resource: tuple) -> str:
     # Перевіряє права доступу користувача до ресурсу
-    res_name, res_level = resource
+    _, res_level = resource
 
     # Перевірка наявності користувача в базі
     if username not in users:

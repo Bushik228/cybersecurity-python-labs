@@ -18,6 +18,7 @@ passwords = [
     "P@ssw0rd123",
     "welcome",
     "StrongP@ss1",
+    "qwerty",
 ]
 
 # Критерії складності пароля
